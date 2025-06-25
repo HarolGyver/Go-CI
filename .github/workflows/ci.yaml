@@ -1,9 +1,11 @@
 name: ci-go-workflow
 on:
-    pull_request:
-      branches:
-        - develop
-
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
   check-application:
     runs-on: ubuntu-latest
