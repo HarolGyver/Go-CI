@@ -1,11 +1,14 @@
 name: ci-go-workflow
 on:
-    pull_request:
-      branches:
-        - develop
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  check-application:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
